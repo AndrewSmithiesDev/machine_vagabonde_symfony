@@ -1,0 +1,24 @@
+.banner-dark {
+    height: 240px;
+    background-image: url("/images/Logos/dark-banner-coloured.jpg");
+    background-repeat: repeat;
+    background-size: 30%;
+    position: relative;
+}
+
+#debarrassage-content {
+    img {
+        margin: 20px 0px;
+        border-radius: 10px;
+        max-width: 380px;
+        max-height: 300px;
+        width: 100%;
+        height: auto;
+        object-fit:cover;
+    }
+    li {
+        font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        }
+}

@@ -1,0 +1,199 @@
+@import "./variables";
+@import "./debarrassage";
+@import "./brocante";
+@import "./surcyclage";
+@import "./contact";
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: "architectbold";
+  src: url("/fonts/architect_bold-webfont.woff") format("woff"),
+    url("/fonts/architect_bold-webfont.woff2") format("woff2"),
+    url("/fonts/architectregular-d0xr-webfont.woff") format("woff"),
+    url("/fonts/architectregular-d0xr-webfont.woff2") format("woff2"),
+    url("/fonts/ArchitectRegular-D0XR.ttf") format("ttf"),
+    url("/fonts/Architect\ Bold.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "brush_script_std";
+  src: url("/fonts/brushscriptstd-webfont.woff2") format("woff2"),
+    url("/fonts/brushscriptstd-webfont.woff") format("woff"),
+    url("/fonts/BrushScriptStd.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "brush_script_italic";
+  src: url("/fonts/brushsci-webfont.woff2") format("woff2"),
+    url("/fonts/brushsci-webfont.woff") format("woff"),
+    url("/fonts/BRUSHSCI.TTF") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#hero-title #machine {
+    font-size: clamp(1.5rem, 6vw + 0.5rem, 6rem);
+    line-height: 0.6;
+}
+
+#hero-title #vagabonde {
+    font-size: clamp(2.7rem, 7vw, 6.5rem);
+    line-height: 0.6;
+}
+
+h2 {
+  font-size: clamp(1.3rem, 4vw + 0.5rem, 4rem);
+  line-height: 0.6;
+}
+
+h3 {
+  font-size: clamp(1rem, 2vw + 0.3rem, 1.6rem);
+}
+
+p {
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+}
+
+.btn-outline-primary:hover {
+  color: $white !important;
+}
+
+.btn-outline-light {
+  color: $white !important;
+}
+.btn-outline-light:hover {
+  color: $primary !important;
+}
+
+.btn-primary {
+  color: $white !important;
+}
+.btn-primary:hover {
+  color: $white !important;
+}
+
+#service-title {
+  position: absolute;
+  bottom: 5px;
+  left: 50vw;
+  right: 50vw;
+  h2 {
+    border-radius: 40px;
+  }
+}
+
+.carousel {
+  img {
+    max-height: 400px;
+    width: auto;
+    object-fit: cover;
+  }
+}
+
+// FONTS
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.architect {
+  font-family: "architect", sans-serif;
+  font-style: normal;
+}
+
+.brush-script-std {
+  font-family: "brush_script_std", serif;
+}
+
+.brush-script-italic {
+  font-family: "brush_script_italic", serif;
+}
+
+.text-secondary {
+  color: $secondary-900;
+}
+
+// NAVBAR
+
+nav {
+  z-index: 10;
+}
+
+.primary-opacity75 {
+  background-color: #543864be;
+}
+
+nav .navbar-brand img {
+  max-height: 64px;
+}
+
+// HERO
+#hero {
+  img {
+    max-width: 30%;
+  }
+}
+
+//SERVICES
+#services {
+  img {
+    margin: 20px 0px;
+    border-radius: 10px;
+    max-width: 380px;
+    max-height: 300px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+//VALEURS
+#valeurs {
+  li {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    margin-bottom: 1.2rem;
+  }
+  .notre {
+    font-size: clamp(1.2rem, 3vw, 2.4rem);
+    line-height: 0.8;
+  }
+}
+
+//NOUSE SUIVRE
+#nous-suivre {
+  a {
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  }
+}
+
+.email-text {
+  font-size: clamp(0.5rem, 1vw, 1.1rem);
+}
+//FOOTER
+
+footer {
+  border-top: 2px solid $secondary;
+  span {
+    font-size: clamp(0.5rem, 1vw, 1.1rem);
+  }
+}
