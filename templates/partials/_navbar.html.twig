@@ -8,19 +8,19 @@
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ms-auto">
 				<li class="nav-item">
-					<a class="nav-link {% if app.request.get('_route') == 'home' %}active{% endif %}" href="{{ path('home') }}">Accueil</a>
+					<a class="nav-link {% if app.request.attributes.get('_route') == 'home' %}active{% endif %}" href="{{ path('home') }}">Accueil</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link {% if app.request.get('_route') == 'debarrassage' %}active{% endif %}" href="{{ path('debarrassage') }}">Débarrassage</a>
+					<a class="nav-link {% if app.request.attributes.get('_route') == 'debarrassage' %}active{% endif %}" href="{{ path('debarrassage') }}">Débarrassage</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link {% if app.request.get('_route') == 'brocante' %}active{% endif %}" href="{{ path('brocante') }}">Brocante</a>
+					<a class="nav-link {% if app.request.attributes.get('_route') == 'brocante' %}active{% endif %}" href="{{ path('brocante') }}">Brocante</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link {% if app.request.get('_route') == 'surcyclage' %}active{% endif %}" href="{{ path('surcyclage') }}">Surcyclage</a>
+					<a class="nav-link {% if app.request.attributes.get('_route') == 'surcyclage' %}active{% endif %}" href="{{ path('surcyclage') }}">Surcyclage</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link {% if app.request.get('_route') == 'contact' %}active{% endif %}" href="{{ path('contact') }}">Contact</a>
+					<a class="nav-link {% if app.request.attributes.get('_route') == 'contact' %}active{% endif %}" href="{{ path('contact') }}">Contact</a>
 				</li>
 			</ul>
 		</div>
