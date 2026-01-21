@@ -8,11 +8,9 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class SiteController extends AbstractController
 {
-    #[Route('/site', name: 'app_site')]
-    public function index(): Response
+    #[Route('/', name: 'home')]
+    public function home(): Response
     {
-        return $this->render('site/index.html.twig', [
-            'controller_name' => 'SiteController',
-        ]);
+        return $this->render('site/home.html.twig');
     }
 }
