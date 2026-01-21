@@ -1,0 +1,28 @@
+<nav class="navbar navbar-dark primary-opacity75 navbar-expand-lg">
+	<div class="container">
+		<a class="navbar-brand" href="{{ path('home') }}">
+			<img class="img-fluid" src="{{ asset('images/Logos/text-white.png')}}" alt="Machine Vagabonde Logo"/></a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ms-auto">
+				<li class="nav-item">
+					<a class="nav-link {% if app.request.get('_route') == 'home' %}active{% endif %}" href="{{ path('home') }}">Accueil</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link {% if app.request.get('_route') == 'debarrassage' %}active{% endif %}" href="{{ path('debarrassage') }}">Débarrassage</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link {% if app.request.get('_route') == 'brocante' %}active{% endif %}" href="{{ path('brocante') }}">Brocante</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link {% if app.request.get('_route') == 'surcyclage' %}active{% endif %}" href="{{ path('surcyclage') }}">Surcyclage</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link {% if app.request.get('_route') == 'contact' %}active{% endif %}" href="{{ path('contact') }}">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

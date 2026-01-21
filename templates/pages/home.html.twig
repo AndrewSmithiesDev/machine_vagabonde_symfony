@@ -1,0 +1,221 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil - Machine Vagabonde
+{% endblock %}
+
+{% block body %}
+
+	{# HERO SECTION #}
+	<div id="hero" class="text-primary mt-3">
+		<div class="container d-flex flex-column justify-content-center align-items-center text-center">
+
+			<div data-aos="fade-up" data-aos-duration="3000" id="hero-img-title" class="d-flex align-items-center justify-content-center">
+
+				<img src="{{ asset('images/Logos/bird-icon.png') }}" alt="Logo oiseau" class="img-fluid"/>
+				<div id="hero-title" class="text-center w-auto d-flex flex-column">
+					<h1 id="machine" class="architect fw-bold mb-0 mt-5">MACHINE</h1>
+					<h1 id="vagabonde" class="brush-script-italic">Vagabonde</h1>
+				</div>
+			</div>
+			<h3 class="poppins-bold my-4">
+				Débarrasser, récupérer, transformer et redonner vie à des objets de seconde main.
+			</h3>
+			<p class="poppins-regular mb-4">
+				Entre recyclage, dons solidaires et créations surcyclées, notre activité consiste à valoriser les encombrants comme une ressource locale, joyeusement bricolée et pleine d'histoires solidaires porteuses de sens.
+			</p>
+		</div>
+	</div>
+
+	{# SERVICES SECTION #}
+	<div id="services" class="bg-primary text-white">
+		<div
+			class="container d-flex flex-column justify-content-center py-4">
+
+			{# DÉBARRASSAGE #}
+			<div id="debarrassage" class="services-content d-flex flex-column-reverse flex-md-row my-4 gap-md-5">
+				<div data-aos="fade-right" data-aos-duration="3000" class="services-images text-center w-100">
+					<img src="./images/Débarrassage/Débarrassage-Combrailles-2.jpg" alt="Débarrassage-Combrailles-2" class="img-fluid"/>
+					<img src="./images/Débarrassage/Débarrassage-Fontanil.jpg" alt="Débarrassage-Fontanil" class="img-fluid"/>
+				</div>
+				<div data-aos="fade-left" data-aos-duration="3000" class="services-text text-center d-flex flex-column justify-content-center align-items-center">
+					<h3 class="poppins-bold">Débarrassage</h3>
+					<p class="my-4 poppins-regular">
+						Intervention directement chez les particuliers, dans les caves, greniers, appartements ou lieux d’activité pour collecter ce qui est jugé inutile, encombrant ou usé.
+					</p>
+					<p class="poppings-regular fw-light">
+						Ici, le déchet devient potentiellement ressource dès le premier regard.
+					</p>
+					<a name="" id="" class="btn btn-light text-primary my-4" href="debarrassage.html" role="button">Découvrir le service</a>
+				</div>
+			</div>
+			<hr
+			class="text-secondary"/>
+
+			{# BROCANTE #}
+			<div id="brocante" class="services-content d-flex flex-column flex-md-row my-4 gap-md-5">
+				<div data-aos="fade-right" data-aos-duration="3000" class="services-text text-center d-flex flex-column justify-content-center align-items-center">
+					<h3 class="poppins-bold">Brocante</h3>
+					<p class="mt-4 poppins-regular">
+						Après tri, nettoyage et petites réparations, une grande partie des objets récupérés est remise en circulation à travers des brocantes organisées en ligne ou sur place.
+					</p>
+					<p class="poppings-regular">
+						Tous les objets sont proposés à
+						<strong>prix libre</strong>, pour favoriser l’accessibilité, éviter le gaspillage et encourager les circuits courts.
+					</p>
+					<p class="poppings-regular my-4 fw-light">
+						Donner, c’est déjà recycler ; transmettre, c’est prolonger l’histoire des objets.
+					</p>
+					<a class="btn btn-secondary text-primary my-4" href="{{ path('brocante') }}" role="button">Découvrir le service</a>
+				</div>
+				<div data-aos="fade-left" data-aos-duration="3000" class="services-images text-center w-100">
+					<img src="{{ asset('/images/Brocante/borcante-1.webp') }}" alt="borcante-1" class="img-fluid"/>
+					<img src="{{ asset('/images/Brocante/borcante-2.webp') }}" alt="borcante-2" class="img-fluid"/>
+				</div>
+			</div>
+
+			<hr
+			class="text-secondary"/>
+
+			{# SURCYCLAGE #}
+			<div id="surcyclage" class="services-content d-flex flex-column-reverse flex-md-row my-4 gap-md-5">
+				<div data-aos="fade-right" data-aos-duration="3000" class="services-images text-center w-100">
+					<img src="{{ asset('/images/Surcyclage/Meuble-bar-2.jpg') }}" alt="Meuble-bar-2" class="img-fluid"/>
+					<img src="{{ asset('/images/Surcyclage/Meuble-bar-7.jpg') }}" alt="Meuble-bar-7" class="img-fluid"/>
+				</div>
+				<div data-aos="fade-left" data-aos-duration="3000" class="services-text text-center d-flex flex-column justify-content-center align-items-center">
+					<h3 class="poppins-bold">Surcyclage</h3>
+					<p class="my-4 poppins-regular">
+						Quand un objet ne peut plus être utilisé tel quel, il devient matière à créer. Le surcyclage, ou upcycling, consiste à transformer ces matériaux — bois, métal, pièces détachées, chutes — en créations uniques : meubles revisités, objets hybrides, aménagements sur mesure…
+					</p>
+					<p class="poppings-regular fw-light">
+						Ici, chaque vis, chaque planche a une histoire. Et chaque création raconte un nouveau possible.
+					</p>
+					<a class="btn btn-outline-light my-4" href="{{ path('surcyclage') }}" role="button">Découvrir le service</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{# VALEURS SECTION #}
+	<div id="valeurs" class="text-primary mt-5 pt-3">
+		<div class="container mb-5">
+			<div id="ethique" class="valeurs-titre text-center mb-5">
+				<h2 class="architect fw-bold mb-0 notre">NOTRE</h2>
+				<h2 class="brush-script-italic">Ethique</h2>
+			</div>
+
+			<div class="row poppins-regular">
+				<div class="col-md-6">
+					<p>
+						Nous axons nos activités autour du cycle des objets et des matières. Dans une lutte actuelle du zéro déchets, il nous a semblé évident de réfléchir à un mode d’action complet.
+					</p>
+					<p>
+						Nous récupérons et débarrassons des particulier.e.s, rues ou professionnel.le.s de ce qui les encombre et nous occupons de
+						<strong>surcycler ou de vendre les objets ou matériaux.</strong>
+						Tout ce qui ne se réemploie pas se recycle, nous mettons un point d’honneur à valoriser les déchets qui ne trouveront plus d’utilité directe.
+					</p>
+				</div>
+				<div class="col-md-6">
+					<p>Le réemploi se fait à plusieurs échelles :</p>
+					<ul class="poppins-regular">
+						<li>
+							<strong>Nettoyage ou réhabilitation</strong>
+							des objets récupérés.
+						</li>
+						<li>
+							<strong>Récupération</strong>
+							d’éléments fonctionnels (poignée, harnières, portes, modules…) sur les meubles récupérés.
+						</li>
+						<li>
+							<strong>Fabrication</strong>
+							de nouveaux meubles à partir de matériaux récupérés.
+						</li>
+						<li>
+							<strong>Réalisation sur mesure</strong>
+							de travaux d’aménagement.
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="politique" class="valeurs-titre text-center mt-5 mb-5">
+				<h2 class="architect fw-bold mb-0 notre">NOTRE</h2>
+				<h2 class="brush-script-italic">Politique</h2>
+			</div>
+			<p>
+				Si les projets ne nous inspirent pas ou si le stockage est à flux tendu, nous valorisons également nos récupération sous la forme de don. Dans une société où la précarité s’est confortablement installée,
+				<strong>nous tentons au maximum de partager des objets ou matériaux à des personnes dans le besoin.</strong>
+			</p>
+			<p>
+				Il nous semble également très important de
+				<strong>mettre les femmes et personnes discriminées en valeur.</strong>
+				Laisser la place à des minorités dans des métiers dits « d’homme » est pour nous une valeur essentielle à la création de notre entreprise.
+			</p>
+			<p>
+				Dans la mesure du possible, nous n’utilisons pas les GAFAMs et préférons l’utilisation de logiciels libres alternatifs. A l’heure où tout se vend, nous ferons de notre mieux pour protéger vos données et les notre.
+			</p>
+		</div>
+	</div>
+
+	{# NOUS SUIVRE SECTION #}
+	<div id="nous-suivre" class="text-white py-5 bg-primary poppins-regular">
+		<div class="container">
+			<div class="text-center mb-5">
+				<h3>Nous suivre</h3>
+				<p>
+					Les actus de Machine Vagabonde : dates des Brocantes à prix libre + le partage des différentes presta effectuées.
+				</p>
+				<p>
+					Quelques objets / meubles de la Brocante à prix libre que vous pourrez réserver en commentant la publi !
+				</p>
+			</div>
+
+			<div class="row justify-content-center">
+				<div class="col-md-4 align-content-center fs-4" id="socials">
+					<div class="row gap-3 mb-3">
+						<div class="col-md-12 col">
+							<a href="https://www.instagram.com/machinevagabonde/#" class="text-white text-decoration-none">
+								<i class="bi bi-instagram text-secondary p-3"></i>Instagram</a>
+						</div>
+						<div class="col-md-12 col">
+							<a href="https://t.me/machinevagabonde" class="text-white text-decoration-none">
+								<i class="bi bi-telegram text-secondary p-3"></i>Canal Telegram</a>
+						</div>
+					</div>
+					<div class="row gap-3 mb-3">
+						<div class="col-md-12 col">
+							<a href="mailto:machinevagabonde@email.com" class="text-white text-decoration-none">
+								<i class="bi bi-envelope text-secondary p-3"></i>
+								<span class="email-text">machinevagabonde@protonmail.com</span>
+							</a>
+						</div>
+						<div class="col-md-12 col">
+							<a href="tel:+336328955XX" class="text-white text-decoration-none">
+								<i class="bi bi-telephone text-secondary p-3"></i>06 32 89 55 XX</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-inner" role="listbox">
+							{% for img in instaImages %}
+								<div class="carousel-item {% if loop.first %}active{% endif %}">
+									<img src="{{ asset('images/Insta/' ~ img) }}" class="w-100 d-block img-fluid" alt="Instagram post">
+								</div>
+							{% endfor %}
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Précédent</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Suivant</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
