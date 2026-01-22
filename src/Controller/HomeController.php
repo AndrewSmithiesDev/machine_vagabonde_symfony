@@ -13,12 +13,12 @@ final class HomeController extends AbstractController
     {
         $instaImages = [
             'insta-post-1.png',
-            'insta-post-1.png',
-            'insta-post-1.png',
-            'insta-post-1.png',
-            'insta-post-1.png',
-            'insta-post-1.png',
-            'insta-post-1.png',
+            'insta-post-2.png',
+            'insta-post-3.png',
+            'insta-post-4.png',
+            'insta-post-5.png',
+            'insta-post-6.png',
+            'insta-post-7.png',
         ];
 
         return $this->render('pages/home.html.twig', [

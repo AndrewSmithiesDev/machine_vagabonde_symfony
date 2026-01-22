@@ -1,0 +1,150 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Débarrassage - Machine Vagabonde
+{% endblock %}
+
+{% block navbar %}
+	<div class="banner-black">
+		{% include "partials/_navbar.html.twig" %}
+
+		{# PAGE TITLE #}
+		<div class="text-center d-flex align-items-center justify-content-center" id="service-title">
+			<h2 class="bg-white px-4 py-2 mb-0 text-primary lh-1">Débarrassage</h2>
+		</div>
+	</div>
+{% endblock %}
+
+
+{% block body %}
+
+	<div class="d-flex flex-column justify-content-center">
+		<div id="debarrassage-content">
+        {# SECTION 1 - QU'EST-CE QUE LE DÉBARRAS ? #}
+			<div class="container d-flex flex-column flex-md-row gap-md-5 py-4 justify-content-center align-items-center">
+
+				<div data-aos="fade-right" data-aos-duration="3000" class="d-flex flex-column justify-content-center align-items-center text-primary">
+					<h3 class="poppins-regular text-center">
+						Qu’est-ce que le débarras ?
+					</h3>
+					<p class="my-4 poppins-regular text-center">
+						Faire de la place, trier, vider, « se débarrasser de choses » alors que « ça pourrait servir » … vaste programme !
+					</p>
+					<p class="poppings-regular fw-light align-self-start">
+						Machine Vagabonde propose deux services :
+					</p>
+					<ol>
+						<li class="fw-bold">
+							Aide au débarras
+							<ul class="fw-normal">
+								<li>
+									Accompaniment personnalisé pour ouvrir cartons, trier et econditionner.
+								</li>
+								<li>
+									Presence possible de vos proches pour faciliter les décisions.
+								</li>
+							</ul>
+						</li>
+						<li class="fw-bold">
+							Débarras classique
+							<ul class="fw-normal">
+								<li>
+									Vidage total ou partiel de maisons, appartements, garages, caves, greniers, cabanons, granges ou pièces individuelles.
+								</li>
+							</ul>
+						</li>
+					</ol>
+					<a class="btn btn-outline-primary text-primary my-4" href="{{ path('contact') }}" role="button">Nous contacter</a>
+				</div>
+				<div data-aos="fade-left" data-aos-duration="3000" class="text-center w-100">
+					<img src="{{ asset('images/Débarrassage/Débarrassage-Rives.jpg') }}" alt="Débarrassage-Combrailles-2" class="img-fluid"/>
+					<img src="{{ asset('images/Débarrassage/Débarrassage-Tassin.jpg') }}" alt="Débarrassage-Fontanil" class="img-fluid"/>
+				</div>
+			</div>
+
+			<!-- Comment ça se passe ? -->
+
+			<div class="bg-primary">
+				<div class="container d-flex flex-column flex-md-row gap-md-5 py-4 justify-content-center align-items-center">
+					<div data-aos="fade-right" data-aos-duration="3000" class="text-center flex-fill">
+						<img src="{{ asset('images/Débarrassage/Débarrassage-Vourey.jpg') }}" alt="Débarrassage-Combrailles-2" class="img-fluid"/>
+						<img src="{{ asset('images/Débarrassage/Débarrassage-Combrailles.jpg') }}" alt="Débarrassage-Fontanil" class="img-fluid"/>
+					</div>
+					<div data-aos="fade-left" data-aos-duration="3000" class="d-flex flex-column justify-content-center align-items-center text-white flex-fill">
+						<h3 class="poppins-regular text-center">Comment ça se passe ?</h3>
+
+						<ul class="fw-normal">
+							<li>
+								<strong>Prise de rendez-vous</strong> sur place après échange éléphonique ou par mail
+							</li>
+							<li>
+								<strong>Visite</strong> pour évaluer l’accès, le volume et les contraintes
+							</li>
+							<li>
+								<strong>Recherche</strong> d’options locales de recyclage, ressourceries ou dons
+							</li>
+							<li>
+								<strong>Envoi d’un devis</strong> avec planning prévisionnel
+							</li>
+							<li>
+								<strong>Validation</strong> du devis (+ acompte, planning, clés si besoin)
+							</li>
+							<li>
+								<strong>Intervention</strong> ur site : tri, démontage, enlèvement
+							</li>
+							<li>
+								<strong>Vérification</strong> finale (si présence non requise)
+							</li>
+							<li>
+								<strong>Paiement</strong> : chèque, espèce ou virement</li>
+						</ul>
+
+						<a class="btn btn-light text-primary my-4" href="{{ path('contact') }}" role="button">Nous contacter</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Surcyclage & rémploi -->
+			<div class="container d-flex flex-column flex-md-row gap-md-5 text-primary py-4 align-items-center justify-content-center">
+				<div data-aos="fade-right" data-aos-duration="3000" class="w-100 d-flex flex-column align-items-center">
+					<h3 class="poppins-regular text-center">Surcyclage & réemploi</h3>
+					<p class="my-4 poppins-regular text-center">
+						Seuls les objets réellement irréutilisables (10-20%) partent à la déchetterie.
+					</p>
+					<p class="poppings-regular align-self-start">
+						Environ 80% des objets sont :
+					</p>
+					<ul class="poppins-regular">
+						<li>Mis en vente libre via la brocante</li>
+						<li>Donnés à des ressourceries, associations ou collectifs</li>
+					</ul>
+					<a name="" id="" class="btn btn-primary text-primary my-4" href="surcyclage.html" role="button">Lire plus</a>
+					<img src="{{ asset('images/Débarrassage/Débarrassage-Vourey-2.jpg') }}" alt="Débarrassage-Combrailles-2" class="img-fluid"/>
+				</div>
+
+				<div data-aos="fade-left" data-aos-duration="3000" class="w-100 d-flex flex-column align-items-center">
+					<img src="{{ asset('images/Débarrassage/Débarrassage-Vourey-3.jpg') }}" alt="Débarrassage-Fontanil" class="img-fluid"/>
+					<h3 class="poppins-regular text-center">
+						Ce que vous devez savoir
+					</h3>
+					<ul class="poppins-regular">
+						<li>
+							Intervention sur <strong>tout le territoire métropolitain français</strong>, avec réemploi local
+						</li>
+						<li>
+							<strong>Pas de ménage</strong> à la fin de l’intervention</li>
+						<li>
+							Possibilité de retirer luminaires/appareils (lustres, appliques, tringles), mais <strong>pas garantis</strong> contre les dommages
+						</li>
+						<li>
+							Nous <strong>ne vendons pas</strong> es objets de débarras pour reversement à votre prestation
+						</li>
+					</ul>
+
+					<a name="" id="" class="btn btn-secondary text-primary my-4" href=""{{ path('contact') }}" role="button">Nous contacter</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}
