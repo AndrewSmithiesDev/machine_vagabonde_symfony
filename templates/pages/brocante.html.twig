@@ -1,0 +1,227 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Brocante - Machine Vagabonde
+{% endblock %}
+
+{% block navbar %}
+	<div class="banner-black">
+		{% include "partials/_navbar.html.twig" %}
+
+		{# PAGE TITLE #}
+		<div class="text-center d-flex align-items-center justify-content-center" id="service-title">
+			<h2 class="bg-white px-4 py-2 mb-0 text-primary lh-1">Brocante</h2>
+		</div>
+	</div>
+{% endblock %}
+
+{% block body %}
+
+	{# INTRO SECTION #}
+	<div class="container text-primary text-center poppins-regular py-4">
+		<h3>Rien ne se perd, tout se transmet</h3>
+		<p>
+			La brocante est l’un des moyens de faire circuler ce qui est récupéré lors des débarras.
+		</p>
+		<p>
+			Tout ne finit pas à la benne : une grande partie des objets trouvent une nouvelle maison, grâce à vous.
+		</p>
+		<p>
+			La brocante de Machine Vagabonde se veut
+			<strong>solidaire</strong>.
+		</p>
+		<p>
+			C’est pourquoi des
+			<strong>« prix libres »</strong>
+			sont proposés.
+		</p>
+	</div>
+
+	{# BROCANTES NOMADES #}
+	<div class="bg-primary">
+		<div
+			class="container d-flex flex-column flex-md-row gap-5 text-white py-4 align-items-center justify-content-center">
+
+			{# TEXT + INSTAGRAM #}
+			<div data-aos="fade-right" data-aos-duration="3000" class="w-100 d-flex flex-column align-items-center">
+				<h3 class="poppins-regular text-center">Brocantes nomades</h3>
+				<p class="my-4 poppins-regular">
+					Des brocantes sont organisées régulièrement dans différents lieux. On y retrouve une sélection d’objets issus des débarras :
+					<strong>meubles, vaisselle, livres, outils décorations</strong>…
+				</p>
+				<p class="poppings-regular">
+					Retrouvez l'agenda plus bas sur cette page ou suivez-nous sur instagram où les dates sont postées au fur et à mesure.
+				</p>
+
+				<a href="https://www.instagram.com/machinevagabonde?utm_source=ig_web_button_share_sheet&igsh=amJ4cmNlMTh4MXJo" target="_blank">
+
+					<div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-inner" role="listbox">
+							{% for img in instaImages %}
+								<div class="carousel-item {% if loop.first %}active{% endif %}">
+									<img src="{{ asset('images/Insta/' ~ img) }}" class="w-100 d-block img-fluid" alt="Instagram post">
+								</div>
+							{% endfor %}
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Précédent</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Suivant</span>
+						</button>
+					</div>
+				</a>
+			</div>
+
+			{# TEXT + IMAGE GRID #}
+			<div data-aos="fade-left" data-aos-duration="3000" class="w-100 d-flex flex-column align-items-center justify-content-center gap-4" id="brocante-img-grid">
+				<div class="row gap-2">
+					<div class="col">
+						<img src="{{ asset('images/Brocante/borcante-1.webp') }}" alt="" class="img-fluid"/>
+					</div>
+					<div class="col">
+						<img src="{{ asset('images/Brocante/borcante-2.webp') }}" alt="" class="img-fluid"/>
+					</div>
+				</div>
+				<div class="row gap-2">
+					<div class="col">
+						<img src="{{ asset('images/Brocante/borcante-3.webp') }}" alt="" class="img-fluid"/>
+					</div>
+					<div class="col">
+						<img src="{{ asset('images/Brocante/vinyls.webp') }}" alt="" class="img-fluid"/>
+					</div>
+				</div>
+				<h3 class="poppins-regular text-center">Depuis chez vous</h3>
+				<p class="poppins-regular">
+					Tout ne passe pas par les brocantes en physique. Une grande partie des objets encombrants - parfois lors d'un débarras - est postée sur notre compte
+					<strong>Instagram</strong>
+					:
+					<a href="https://www.instagram.com/machinevagabonde?utm_source=ig_web_button_share_sheet&igsh=amJ4cmNlMTh4MXJo" target="_blank" class="text-white">@machinevagabonde</a>.
+				</p>
+
+				<p class="poppins-regular">
+					Si quelque chose vous intéresse, vous pouvez simplement
+					<strong>nous écrire pour le réserver</strong>. Il est ensuite possible de venir le récupérer sur place, ou de demander une
+					<strong>livraison à petit prix</strong>, selon la taille de l’objet et la distance.
+				</p>
+
+				<a class="btn btn-secondary text-primary my-4" href="{{ path('contact') }}" role="button">Nous contacter</a>
+			</div>
+		</div>
+	</div>
+
+	{# EVENTS #}
+	<div class="bg-white">
+		<div class="container py-4">
+			<h3 class="evenements-title poppins-regular text-primary text-center mb-3">Événements à venir</h3>
+			<div class="row justify-content-center align-items-center g-4">
+
+				{% if events is empty %}
+					<div class="col-12 text-center">
+						<div class="card p-4 text-primary poppins-regular" style="max-width:300px;margin:auto;">
+							<p class="mb-2 fw-bold">Aucun événement à venir</p>
+							<p class="small">Revenez bientôt pour découvrir les prochaines brocantes.</p>
+						</div>
+					</div>
+				{% else %}
+					{% for eventData in events %}
+						{% set event = eventData.entity %}
+
+						<div class="col-auto">
+							<a href="#" class="card-link text-decoration-none" data-bs-toggle="modal" data-bs-target="#eventModal" data-title="{{ event.title }}" data-subtitle="{{ event.subtitle }}" data-img="{{ asset('uploads/events/' ~ event.image) }}" data-address="{{ event.address }}" data-time="{{ event.displayTime }}" data-day="{{ eventData.displayDay }}" data-google="{{ eventData.googleUrl }}" data-ics="{{ eventData.ics }}" data-maps="{{ eventData.mapsUrl }}">
+
+								<div class="card text-start border-primary-subtle poppins-regular">
+									<img src="{{ asset('uploads/events/' ~ event.image) }}" alt="{{ event.title }}" class="card-img-top">
+
+									<div class="card-img-overlay rounded-end-0 rounded-bottom-0 bg-secondary justify-content-center align-items-center d-flex flex-column poppins-bold text-primary">
+										<div class="month fs-5 lh-sm">{{ eventData.monthShort }}</div>
+										<div class="day fs-4 lh-sm">{{ eventData.day }}</div>
+									</div>
+
+									<div class="card-body text-primary">
+										<p class="card-title fw-bold fs-5">{{ event.subtitle }}</p>
+										<p class="card-text mb-0">{{ eventData.displayDay }}</p>
+										<p class="card-text">{{ event.displayTime }}</p>
+									</div>
+								</div>
+							</a>
+						</div>
+
+					{% endfor %}
+				{% endif %}
+
+
+			</div>
+		</div>
+	</div>
+
+	{# EVENT MODAL #}
+	<div class="modal fade" id="eventModal" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-md poppins-regular">
+			<div class="modal-content bg-white">
+				<div class="modal-header">
+					<div class="text-center w-100">
+						<h4 id="modalTitle" class="mb-0 text-primary"></h4>
+						<p id="modalSubtitle" class="text-primary mb-0"></p>
+					</div>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body text-center text-primary p-0 pb-2">
+					<img id="modalImg" class="img-fluid mb-3 p-0" alt="Event image"/>
+					<div class="d-flex justify-content-around p-3">
+						<p id="modalAddress" class="fs-6"></p>
+						<div>
+							<p id="modalDay" class="fs-6"></p>
+							<p id="modalTime" class="fs-6"></p>
+						</div>
+					</div>
+					<div class="d-flex justify-content-center gap-2 mt-3">
+						<a id="calendarLink" href="#" class="btn btn-sm btn-primary" target="_blank">
+							Ajouter au calendrier
+						</a>
+						<a id="mapsLink" href="#" class="btn btn-sm btn-outline-primary" target="_blank">
+							Voir sur Google Maps
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}
+
+
+{% block javascripts %}
+	{# EVENT MODAL #}
+	<script>
+		const eventModal = document.getElementById("eventModal");
+
+eventModal.addEventListener("show.bs.modal", function (event) {
+const trigger = event.relatedTarget;
+
+document.getElementById("modalTitle").textContent = trigger.dataset.title;
+document.getElementById("modalSubtitle").textContent = trigger.dataset.subtitle;
+document.getElementById("modalImg").src = trigger.dataset.img;
+
+document.getElementById("modalAddress").innerHTML = trigger.dataset.address.replace(/\n/g, "<br>").replace(/,/g, "<br>");
+
+document.getElementById("modalTime").textContent = trigger.dataset.time;
+document.getElementById("modalDay").textContent = trigger.dataset.day;
+
+const calendarLink = document.getElementById("calendarLink");
+
+// iOS → download ICS
+if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+const blob = new Blob([trigger.dataset.ics], {type: "text/calendar"});
+calendarLink.href = URL.createObjectURL(blob);
+} else { // Others → Google Calendar
+calendarLink.href = trigger.dataset.google;
+}
+
+document.getElementById("mapsLink").href = trigger.dataset.maps;
+});
+	</script>
+
+{% endblock %}

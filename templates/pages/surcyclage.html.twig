@@ -1,0 +1,110 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Surcyclage - Machine Vagabonde
+{% endblock %}
+
+{% block navbar %}
+	<div class="banner-black">
+		{% include "partials/_navbar.html.twig" %}
+
+		{# PAGE TITLE #}
+		<div class="text-center d-flex align-items-center justify-content-center" id="service-title">
+			<h2 class="bg-white px-4 py-2 mb-0 text-primary lh-1">Surcyclage</h2>
+		</div>
+	</div>
+{% endblock %}
+
+{% block body %}
+
+  <div class="d-flex flex-column justify-content-center">
+            <div id="surcyclage-content">
+              <div class="container d-flex flex-column flex-md-row gap-md-5 py-4 justify-content-center align-items-center">
+
+              {# Qu’est-ce que le surcyclage ? #}
+                <div
+                  data-aos="fade-right"
+                  data-aos-duration="3000"
+                  class="d-flex flex-column justify-content-center align-items-center text-primary"
+                >
+                  <h3 class="poppins-regular text-center">
+                    Qu’est-ce que le surcyclage ?
+                  </h3>
+                  <p class="poppins-regular text-center">
+                    Donner <strong>un nouveau cycle de vie</strong> à ce qui semblait voué à la benne — matériaux, objets, meubles — <strong>en les transformant et en les revalorisant</strong> : c’est ça, le surcyclage selon Machine Vagabonde.
+                  </p>
+                  <p class="poppings-regular text-center">
+                    Cela peut être aussi simple qu’un bon <strong>nettoyage ou une petite réparation</strong>. Mais parfois, cela va plus loin : <strong>décapage complet, nouvelle peinture ou vernis, ou encore transformation de l’objet</strong> lui-même pour un changement d’usage. Un meuble devient un autre, un objet reprend place dans un nouvel environnement.</p>
+                  
+                  <a
+                    class="btn btn-outline-primary text-primary my-4"
+                    href="{{ path('contact') }}"
+                    role="button"
+                    >Nous contacter</a
+                  >
+                </div>
+                <div
+                  data-aos="fade-left"
+                  data-aos-duration="3000"
+                  class="text-center w-100"
+                >
+                  <img
+                    src="{{ asset('images/Surcyclage/Réparation-tabouret.jpg') }}"
+                    alt="Débarrassage-Combrailles-2"
+                    class="img-fluid"
+                  />
+                  <img
+                    src="{{ asset('images/Surcyclage/Meuble-bar-3.jpg') }}"
+                    alt="Débarrassage-Fontanil"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+      
+      
+              {# Vous avez un meuble ou objet à transformer ? #}
+              <div class="bg-primary">
+                <div class="container d-flex flex-column flex-md-row gap-md-5 py-4 justify-content-center align-items-center">
+                  <div
+                    data-aos="fade-right"
+                    data-aos-duration="3000"
+                    class="text-center w-100"
+                  >
+                    <img
+                      src="{{ asset('images/Surcyclage/Meuble-bar-5.jpg') }}"
+                      alt="Débarrassage-Combrailles-2"
+                      class="img-fluid"
+                    />
+                    <img
+                      src="{{ asset('images/Surcyclage/Meuble-bar-8.jpg') }}"
+                      alt="Débarrassage-Fontanil"
+                      class="img-fluid"
+                    />
+                  </div>
+
+
+                  <div
+                  data-aos="fade-left"
+                  data-aos-duration="3000"
+                  class="d-flex flex-column justify-content-center align-items-center text-white"
+                >
+                  <h3 class="poppins-regular text-center">
+                    Vous avez un meuble ou objet à transformer ?
+                  </h3>
+                  <p class="poppins-regular text-center">
+                    Machine Vagabonde peut aussi être <strong>sollicitée pour des projets de surcyclage à la demande</strong>. Vous avez un objet fatigué mais plein de potentiel ? Un meuble à adapter ou détourner ? Nous pouvons lui donner une seconde - ou énième - vie, ensemble.
+                  </p>
+                  <p class="poppings-regular text-center">
+                    N’hésitez pas à nous Nous contacter pour discuter d’un projet, petit ou grand.</p>
+                  <a
+                    class="btn btn-outline-light text-primary my-4"
+                    href="{{ path('contact') }}"
+                    role="button"
+                    >Nous contacter</a
+                  >
+                </div>
+
+
+                </div>
+              </div>
+
+{% endblock %}
