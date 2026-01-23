@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Event;
+use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Attribute\AdminDashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -32,5 +33,6 @@ class DashboardController extends AbstractDashboardController
 
         // Add your Event CRUD here
         yield MenuItem::linkToCrud('Événements', 'fa fa-calendar', Event::class);
+        yield MenuItem::linkToCrud('Utilisateurs', 'fa fa-user', User::class);
     }
 }

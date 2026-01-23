@@ -16,53 +16,52 @@ class ContactFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-        ->add('firstname', TextType::class, [
-            'label' => false,
-            'attr' => ['placeholder' => '*Prénom'],
-            'constraints' => [
-                new Assert\NotBlank(),
-            ],
-        ])
-        ->add('lastname', TextType::class, [
-            'label' => false,
-            'attr' => ['placeholder' => '*Nom'],
-            'constraints' => [
-                new Assert\NotBlank(),
-            ],
-        ])
-        ->add('email', EmailType::class, [
-            'label' => false,
-            'attr' => ['placeholder' => '*Email'],
-            'constraints' => [
-                new Assert\NotBlank(),
-                new Assert\Email(),
-            ],
-        ])
-        ->add('phone', TextType::class, [
-            'label' => false,
-            'required' => false,
-            'attr' => ['placeholder' => 'Téléphone'],
-        ])
-        ->add('subject', ChoiceType::class, [
-            'label' => false,
-            'placeholder' => '*Sujet',
-            'choices' => [
-                'Débarrassage' => 'Débarrassage',
-                'Brocante' => 'Brocante',
-                'Surcyclage' => 'Surcyclage',
-                'Autre' => 'Autre',
-            ],
-            'constraints' => [
-                new Assert\NotBlank(),
-            ],
-        ])
-        ->add('message', TextareaType::class, [
-            'label' => false,
-            'attr' => ['placeholder' => '*Votre message', 'rows' => 4],
-            'constraints' => [
-                new Assert\NotBlank(),
-            ]
+            ->add('firstname', TextType::class, [
+                'label' => false,
+                'attr' => ['placeholder' => '*Prénom'],
+                'constraints' => [
+                    new Assert\NotBlank(),
+                ],
+            ])
+            ->add('lastname', TextType::class, [
+                'label' => false,
+                'attr' => ['placeholder' => '*Nom'],
+                'constraints' => [
+                    new Assert\NotBlank(),
+                ],
+            ])
+            ->add('email', EmailType::class, [
+                'label' => false,
+                'attr' => ['placeholder' => '*Email'],
+                'constraints' => [
+                    new Assert\NotBlank(),
+                    new Assert\Email(),
+                ],
+            ])
+            ->add('phone', TextType::class, [
+                'label' => false,
+                'required' => false,
+                'attr' => ['placeholder' => 'Téléphone'],
+            ])
+            ->add('subject', ChoiceType::class, [
+                'label' => false,
+                'placeholder' => '*Sujet',
+                'choices' => [
+                    'Débarrassage' => 'Débarrassage',
+                    'Brocante' => 'Brocante',
+                    'Surcyclage' => 'Surcyclage',
+                    'Autre' => 'Autre',
+                ],
+                'constraints' => [
+                    new Assert\NotBlank(),
+                ],
+            ])
+            ->add('message', TextareaType::class, [
+                'label' => false,
+                'attr' => ['placeholder' => '*Votre message', 'rows' => 4],
+                'constraints' => [
+                    new Assert\NotBlank(),
+                ]
             ]);
-
     }
 }
