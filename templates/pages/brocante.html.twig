@@ -204,11 +204,10 @@ const trigger = event.relatedTarget;
 
 document.getElementById("modalTitle").textContent = trigger.dataset.title;
 document.getElementById("modalSubtitle").textContent = trigger.dataset.subtitle;
-const description = trigger.dataset.description || ""; document.getElementById("modalDescription").innerHTML = description.replace(/\n/g, "<br>");
+const description = trigger.dataset.description || "";
+document.getElementById("modalDescription").innerHTML = description.replace(/\n/g, "<br>");
 const img = trigger.dataset.img;
-document.getElementById("modalImg").src = img && img.trim() !== "" 
-    ? img 
-    : "{{ asset('images/default-event.png') }}";
+document.getElementById("modalImg").src = img && img.trim() !== "" ? img : "{{ asset('images/default-event.png') }}";
 
 document.getElementById("modalAddress").innerHTML = trigger.dataset.address.replace(/\n/g, "<br>").replace(/,/g, "<br>");
 
