@@ -68,7 +68,6 @@ class EventCrudController extends AbstractCrudController
                 ->setUploadedFileNamePattern('[slug]-[timestamp].[extension]')
                 ->setHelp('Téléchargez une image au format JPG ou PNG')
                 ->setRequired(false)
-                ->hideOnIndex()
         ];
     }
 }
