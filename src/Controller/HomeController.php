@@ -78,7 +78,7 @@ final class HomeController extends AbstractController
 
             // French formatting
             $displayDay = ucfirst($formatterDisplay->format($start));
-            $monthShort = strtoupper($formatterMonthShort->format($start));
+            $monthShort = mb_strtoupper($formatterMonthShort->format($start), 'UTF-8');
 
             // Calendar formatting
             $startUTC = $start->format('Ymd\THis\Z');
